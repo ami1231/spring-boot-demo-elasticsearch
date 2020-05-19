@@ -9,11 +9,9 @@ import org.springframework.data.elasticsearch.annotations.Document;
 @NoArgsConstructor
 @Builder
 @ToString
-@Document(indexName = "user")
-public class User {
+@Document(indexName = "account")
+public class Account {
     @Id
     private String id;
     private String name;
-    private Integer age;
-    private String sex;
 }
