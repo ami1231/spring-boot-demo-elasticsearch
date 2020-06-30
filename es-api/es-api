@@ -1,0 +1,7 @@
+
+#集群狀況
+GET _cluster/health
+#節點狀況
+GET _cat/nodes
+#分片狀況
+GET _cat/shards
