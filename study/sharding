@@ -1,0 +1,16 @@
+es-节点
+1.本质上就是一个java-process
+2.生产环境建议一个机器一个节点
+3.每个节点启动后会分配一个UID,保存在data目录下
+
+4.master-eligible-nodes、master-nodes
+每个es启动时预设就是master-eligible-nodes,当是这种节点时,我可以参加选举成为master节点
+master节点才可以修改cluster-status。
+
+5.Data-nodes,Coordinating-nodes
+data-nodes-->保存数据
+Coordinating-nodes-->负责接收rest-client请求,将client的请求分发到合适节点,并回报数据给client
+预设每个节点都是Coordinating-nodes
+
+es-分片
+primary-shard,replica shard
